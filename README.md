@@ -2,7 +2,7 @@
 
 A collaborative platform for software teams to report bugs, suggest features, and coordinate resolutions.
 
-**Live URL:** `https://devpulse-api.vercel.app`
+**Live URL:** `https://devpulse-gchq.onrender.com`
 
 ---
 
@@ -83,7 +83,11 @@ npm run dev
 | PATCH  | `/api/issues/:id`  | Maintainer OR own open issue      | Update issue             |
 | DELETE | `/api/issues/:id`  | Maintainer only                   | Delete issue             |
 
-**Query params for GET /api/issues:**
+### Metrics
+
+| Method | Endpoint        | Access      | Description              |
+|--------|-----------------|-------------|--------------------------|
+| GET    | `/api/metrics`  | Maintainer  | Get internal system stats|
 - `sort` — `newest` (default) or `oldest`
 - `type` — `bug` or `feature_request`
 - `status` — `open`, `in_progress`, or `resolved`

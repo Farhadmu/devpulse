@@ -39,7 +39,7 @@ export const signup = async (
     );
 
     if (existing.rows.length > 0) {
-      sendError(res, StatusCodes.BAD_REQUEST, 'An account with this email already exists.');
+      sendError(res, StatusCodes.CONFLICT, 'An account with this email already exists.');
       return;
     }
 

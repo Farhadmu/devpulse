@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 
 import authRoutes from './modules/auth/auth.routes';
 import issueRoutes from './modules/issues/issues.routes';
+import metricsRoutes from './modules/metrics/metrics.routes';
 import { errorHandler } from './middleware/errorHandler';
 
 dotenv.config();
@@ -23,6 +24,7 @@ app.get('/', (_req, res) => {
 // ─── API Routes ────────────────────────────────────────────────────────────────
 app.use('/api/auth', authRoutes);
 app.use('/api/issues', issueRoutes);
+app.use('/api/metrics', metricsRoutes);
 
 // ─── 404 Handler ──────────────────────────────────────────────────────────────
 app.use((_req, res) => {
